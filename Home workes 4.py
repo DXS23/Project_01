@@ -12,15 +12,5 @@ my_favorite_songs = [
 ]
 songs = random.sample(my_favorite_songs, 3)
 time = (songs[0][1] + songs[1][1] + songs[2][1])
-time1 = time - int(time)
-if time1 < 0.6:
-    print(*songs)
-    print('Три песни звучат:', round(time, 2), 'минут.')
-if time1 >= 0.6:
-    count = 0
-    while time1 > 0.6:
-        time1 -= 0.6
-        count += 1
-    time2 = int(time) + count + time1
-    print(*songs)
-    print('Три песни звучат:', round(time2, 2), 'минут.')
+print(*songs)
+print('Три песни звучат:', round(time, 2), 'минут.')
