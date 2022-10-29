@@ -30,3 +30,18 @@ for prod_name, prod_code in titles.items():
 
 
 # Формат строки вывода: "<товар> - <кол-во> шт, стоимость <общая стоимость> руб"
+
+# Отлично!
+#  мой вариант был таким
+item_of_goods = []
+
+for product_name, product_code in titles.items():
+
+    product_quantity = 0
+    product_value = 0
+
+    for position in sales[product_code]:
+        product_quantity += position['quantity']
+        product_value += position['quantity'] * position['price']
+
+    print(product_name, '-', product_quantity, 'шт, стоимость', product_value, 'рублей')
